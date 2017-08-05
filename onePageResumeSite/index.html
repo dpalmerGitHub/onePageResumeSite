@@ -189,7 +189,7 @@
                     <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-12" ng-repeat="snImages in imageLinksServiceNowRow1">
                         <div class="card">
                             <div class="cardHeader"></div>
-                            <div class="cardBody"><img src={{snImages.link}} id="bsiVerify" width="100%" alt={{snImages.alt}}></div>
+                            <div class="cardBody"><img src={{snImages.link}} width="100%" alt={{snImages.alt}}></div>
                         </div>
                     </div>
                 </div>
@@ -200,7 +200,7 @@
                     <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-12" ng-repeat="snImages in imageLinksServiceNowRow2">
                         <div class="card">
                             <div class="cardHeader"></div>
-                            <div class="cardBody"><img src={{snImages.link}} id="lp" width="100%" alt={{snImages.alt}}></div>
+                            <div class="cardBody"><img src={{snImages.link}} width="100%" alt={{snImages.alt}}></div>
 
                         </div>
                     </div>
@@ -210,10 +210,21 @@
             <header class="text-left scrollInfo">Webpage Designs</header>
             <div class="scrollInfo">
                 <div class="row">
-                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-12" ng-repeat="webpageImage in webpageImages">
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-12" ng-repeat="webpageImage in webpageImagesRow1">
                         <div class="card">
                             <div class="cardHeader"></div>
-                            <div class="cardBody"><img src={{webpageImage.link}} id="coliseum" width="100%" alt={{webpageImage.alt}}></div>
+                            <div class="cardBody"><img src={{webpageImage.link}} width="100%" alt={{webpageImage.alt}}></div>
+                        </div>
+                    </div>
+                </div>
+                <!--End Row-->
+            </div>
+            <div class="scrollInfo">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-12" ng-repeat="webpageImage in webpageImagesRow2">
+                        <div class="card">
+                            <div class="cardHeader"></div>
+                            <div class="cardBody"><img src={{webpageImage.link}} width="100%" alt={{webpageImage.alt}}></div>
                         </div>
                     </div>
                 </div>
@@ -289,7 +300,7 @@
                 "link": "https://s3.amazonaws.com/danielmpalmer.com/Images/shipmentPage2.PNG",
                 "alt": "ServiceNow webpage utilized by stores to research in-transit cartons (2/2)"
             }];
-            $scope.webpageImages = [{
+            $scope.webpageImagesRow1 = [{
                 "link": "https://s3.amazonaws.com/danielmpalmer.com/Images/coliseum.PNG",
                 "alt": "Test design for boxing gym webpage"
             }, {
@@ -298,6 +309,16 @@
             }, {
                 "link": "https://s3.amazonaws.com/danielmpalmer.com/Images/portfolioCover.PNG",
                 "alt": "Custom portfolio site cover page design"
+            }];
+            $scope.webpageImagesRow2 = [{
+                "link": "https://s3.amazonaws.com/danielmpalmer.com/Images/Kate_Spade_One_Stop_1.PNG",
+                "alt": "Test design for Kate Spade One Stop website homepage"
+            }, {
+                "link": "https://s3.amazonaws.com/danielmpalmer.com/Images/Kate_Spade_One_Stop_2.PNG",
+                "alt": "Test design for Kate Spade One Stop website homepage menu"
+            }, {
+                "link": "https://s3.amazonaws.com/danielmpalmer.com/Images/Kate_Spade_One_Stop_3.PNG",
+                "alt": "Test design for Kate Spade One Stop website Q&A page"
             }];
 
 
@@ -452,6 +473,7 @@
 
             animate();
             //End Canvas
+
 
 
             //Begin Google Analytics Script
